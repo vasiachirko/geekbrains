@@ -1,1 +1,4 @@
-print(3)
+number1 = 2
+str = 'abc'
+
+pr
