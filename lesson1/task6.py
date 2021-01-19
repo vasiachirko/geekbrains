@@ -1,7 +1,5 @@
-print("Сколько км спортсмен пробежал в первый день")
-distanceStart = int(input())
-print("Сколько км в день должен пробегать спортсмен")
-distanceTotal = int(input())
+distanceStart = int(input("Сколько км спортсмен пробежал в первый день"))
+distanceTotal = int(input("Сколько км в день должен пробегать спортсмен"))
 day = 1
 distance = distanceStart
 while distance < distanceTotal:
