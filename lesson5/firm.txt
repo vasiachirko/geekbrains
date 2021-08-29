@@ -1,0 +1,4 @@
+Ivanov 15000
+Petrov 21000
+Kiselev 18000
+Potapov 40000
