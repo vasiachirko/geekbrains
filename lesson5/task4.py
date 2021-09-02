@@ -7,5 +7,7 @@ with open('numbers.txt', 'r', encoding='utf8') as fo:
         strs2 = [translate[str[0]], str_joined1]
         str_res = ' '.join(strs2)
         strs.append(str_res+'\n')
+
+        str2 = s.replace(str[0], translate[str[0]])
 with open('translated.txt', 'w') as fw:
     fw.writelines(strs)
