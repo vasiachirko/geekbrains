@@ -1,7 +1,6 @@
-from itertools import cycle
+from abc import ABC, abstractmethod
 
-
-class Car:
+class Car(ABC):
     def __init__(self, speed, color, name, is_police):
         self.speed = speed
         self.color = color
@@ -25,6 +24,7 @@ class Car:
         res_index = res_index - len(self.__directions) if res_index > len(self.__directions) - 1 else res_index
         self.direction = self.__directions[res_index]
 
+    @abstractmethod
     def show_speed(self):
         print(self.speed)
 
@@ -33,7 +33,7 @@ class TownCar(Car):
     
     def show_speed(self):
         print(self.speed)
-        if speed > 60:
+        if self.speed > 60:
             print('Превышаете')
 
 
@@ -41,23 +41,22 @@ class WorkCar(Car):
     
     def show_speed(self):
         print(self.speed)
-        if speed > 40:
+        if self.speed > 40:
             print('Превышаете')
 
 
 work_car = WorkCar(40, 'yellow with blue', 'Mack', False)
 town_car = TownCar(85, 'red', 'Olly', True)
-car = Car(1000, 'red', 'Fish', False)
-car.show_speed()
+town_car.show_speed()
 # work_car.show_speed()
 # town_car.show_speed()
 
-car.turn(-1)
-print(car.direction)
-car.turn(1)
-car.turn(1)
-car.turn(1)
-car.turn(1)
-car.turn(1)
-car.turn(1)
-print(car.direction)
+town_car.turn(-1)
+print(town_car.direction)
+town_car.turn(1)
+town_car.turn(1)
+town_car.turn(1)
+town_car.turn(1)
+town_car.turn(1)
+town_car.turn(1)
+print(town_car.direction)
