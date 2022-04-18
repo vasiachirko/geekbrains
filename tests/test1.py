@@ -1,3 +1,7 @@
 import os
+import matplotlib.pyplot as plt
 
-print(os.name)
+import librosa
+import librosa.display
+
+import IPython.display as ipd
